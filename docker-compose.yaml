@@ -1,0 +1,36 @@
+version: "3"
+services:
+  directus:
+    image: directus/directus:10.10.5
+    ports:
+      - 8055:8055
+    volumes:
+      - ./database:/directus/database
+      - ./uploads:/directus/uploads
+      - ./extensions:/directus/extensions
+    environment:
+      KEY: "073e45cd-522f-4602-8189-569a3fc3ca1b"
+      SECRET: "1UkYriwTCTyAFiBeI-G3RE3xznEAA0Hu"
+      ADMIN_EMAIL: "admin@mumbaimetro.com"
+      ADMIN_PASSWORD: "MumMetro@2024"
+      PUBLIC_URL: "http://13.233.142.236:3000"
+      DB_CLIENT: "pg"
+      DB_SSL__REJECT_UNAUTHORIZED: "false"
+      DB_HOST: "202.189.224.222"
+      DB_PORT: "9050"
+      DB_DATABASE: "mmrcl_line3"
+      DB_USER: "postgres"
+      DB_PASSWORD: "|Z851f3V0@_u"
+      CORS_ORIGIN: "false"
+      CORS_METHODS: "GET, POST, PUT, PATCH, DELETE, OPTIONS"
+      CORS_ALLOWED_HEADERS: "Content-Type, Authorization"
+      # EMAIL_FROM: ""
+      # EMAIL_TRANSPORT: "smtp"
+      # EMAIL_SMTP_HOST: "smtp.gmail.com"
+      # EMAIL_SMTP_PORT: 465
+      # EMAIL_SMTP_USER: ""
+      # EMAIL_SMTP_PASSWORD: ""
+      # EMAIL_SMTP_SECURE: "true"
+      WEBSOCKETS_ENABLED: "true"
+      DB_COLLATION: "utf8mb4_unicode_ci"
+    restart: always
