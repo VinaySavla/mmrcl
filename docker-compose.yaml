@@ -16,7 +16,7 @@ services:
       PUBLIC_URL: "http://134.209.148.225:8055"
       DB_CLIENT: "pg"
       DB_SSL__REJECT_UNAUTHORIZED: "false"
-      DB_HOST: "127.0.0.1"
+      DB_HOST: "172.17.0.1"
       DB_PORT: "5432"
       DB_DATABASE: "mmrcl_line3"
       DB_USER: "postgres"
