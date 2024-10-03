@@ -5,9 +5,9 @@ services:
     ports:
       - 8055:8055
     volumes:
-      - ./database:/database
-      - ./uploads:/uploads
-      - ./extensions:/extensions
+      - ./database:/mmrcl/database
+      - ./uploads:/mmrcl/uploads
+      - ./extensions:/mmrcl/extensions
     environment:
       KEY: "073e45cd-522f-4602-8189-569a3fc3ca1b"
       SECRET: "1UkYriwTCTyAFiBeI-G3RE3xznEAA0Hu"
